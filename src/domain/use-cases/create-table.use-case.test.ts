@@ -17,16 +17,16 @@ describe('create-table-use-case', () => {
         const createTable = new CreateTable();
 
         const options = {
-            base: 3,
+            base: 1,
             limit: 20
         };
 
         const table = createTable.excute(options);
         const rows = table.split('\n').length;
 
-        expect(table).toContain('3 X 1 = 3');
-        expect(table).toContain('3 X 10 = 30');
-        expect(table).toContain('3 X 20 = 60');
+        expect(table).toContain('1 X 1 = 1');
+        expect(table).toContain('1 X 10 = 10');
+        expect(table).toContain('1 X 20 = 20');
         expect(rows).toBe(options.limit);
 
     });
